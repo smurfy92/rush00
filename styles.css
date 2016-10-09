@@ -1,0 +1,89 @@
+h1{
+	padding-top: 10px;
+	text-align:center;
+	color:#DDE4E9;
+}
+
+body{
+	margin:0 auto;
+	text-align:center;
+	background-color:#30a7cc;
+}
+
+input[type="text"]{
+	border: 0;
+	border-radius: 4px;
+	height: 17px;
+	text-align:right;
+	padding:0 5px;
+}
+
+.name{
+	position: absolute;
+	color:#DDE4E9;
+	top: 10px;
+	right: 10px;
+}
+
+.menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+	.menu_inside{
+		padding: 10px 20px;
+		display: block;
+		text-decoration: none;
+		color: white;
+		background-color: #005671;
+	}
+
+.produits{
+	padding-top : 20px;
+	width: 80%;	
+	margin:0 auto;
+}
+
+.item{
+	border:3px solid #DDE4E9;
+	box-shadow: 5px 5px 10px black;
+	padding: 20px 20px;
+	text-align: left;
+	border-radius: 10px;
+	width: 350px;
+	margin-left: 20px;
+	float:left;
+}
+	.item label{
+		margin-bottom: 10px;
+		display: inline-block;
+		width:120px;
+	}
+
+	.item img{
+		width:100%;
+		max-width: 80px;
+		height: 80px;
+	}
+
+.form{
+	width: 30%;
+	margin:0 auto;
+	text-align:left;
+	background-color:#9cafbc;
+	border-radius: 20px;
+	padding: 20px 20px;
+	color:#DDE4E9;
+}
+
+	.form label{
+		margin-bottom: 10px;
+		display: inline-block;
+		width:120px;
+	}
+
+.total{
+	color:#005671;
+	clear:both;
+}
