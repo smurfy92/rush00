@@ -4,6 +4,8 @@ $sql = "CREATE DATABASE IF NOT EXISTS rush00";
 $req = mysqli_query($link,$sql);
 $sql="CREATE TABLE `rush00`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `login` TEXT NOT NULL , `mdp` TEXT NOT NULL , `panier` TEXT NOT NULL , `admin` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $req=mysqli_query($link,$sql);
+$sql = "INSERT INTO users (login, mdp, panier, admin) VALUES ('admin', '".hash("whirlpool", "admin")."', '', 1)";
+$req=mysqli_query($link,$sql);
 $sql="CREATE TABLE `rush00`.`panier` ( `id` INT NOT NULL AUTO_INCREMENT , `name` TEXT NOT NULL , `value` TEXT NOT NULL , `img` TEXT NOT NULL , `categorie` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 $req=mysqli_query($link,$sql);
 $sql="CREATE TABLE `rush00`.`categorie` ( `id` INT NOT NULL AUTO_INCREMENT , `name` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
@@ -48,7 +50,7 @@ mysqli_select_db($link,'rush00');
 $sql = "CREATE TABLE IF NOT EXISTS panier ( id INT(6), name VARCHAR(30) NOT NULL, categorie VARCHAR(100), value INT(6), img VARCHAR(100))";
 $req = mysqli_query($link,$sql);
 	$elem = 1;
-	while ($elem != 100) //nb element
+	while ($elem != 151) //nb element
 	{
 		if (!$content)
 			$content = file_get_contents("http://pokemondb.net/pokedex/bulbasaur");
@@ -78,4 +80,4 @@ $req = mysqli_query($link,$sql);
 		//echo $name."  ".$categorie."  ".$img."  \n";
 		$elem++;
 	}
-header("Location: index.php");
+header("Location: logout.php");

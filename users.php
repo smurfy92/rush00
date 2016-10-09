@@ -35,6 +35,7 @@ include("header-admin.php");
 		foreach ($users as $key => $value) {
 			echo '
 			<form class="item" action="users.php" method="post">
+			<a href="panieruser.php?id='.$value["id"].'">See panier</a>
 				<p>Login : '.$value["login"].'</p>
 				<input type="hidden" name="img" value="'.$value["img"].'">
 				<label>Admin: </label>';
